@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Terminal : MonoBehaviour {
-	private Comandos _comandos = new Comandos();
+	private Comandos _comandos;
 
 	public GameObject _terminal;
 	public InputField _comando;
 	public Text _textos;
+
+	void Start(){
+		_comandos = new Comandos(GameObject.FindObjectOfType<ListaDeUsuarios>());
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -18,9 +22,19 @@ public class Terminal : MonoBehaviour {
 		}
 
 		if(this._comando.isFocused && this._comando.text!="" && Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return)){
-			this.executar (this._comando.text, "");	
+			this.analisar();
 		}
 
+	}
+
+	public void analisar(){
+		string[] temp = this._comando.text.ToString().Split(' ');
+
+		if(this._comando.text.ToString().Contains("-u")){
+			this.executar(temp[0],temp[2]);
+		}else{
+			this.executar(this._comando.text.ToString(),"");
+		}
 	}
 
 	public void executar(string comando, string parametros){

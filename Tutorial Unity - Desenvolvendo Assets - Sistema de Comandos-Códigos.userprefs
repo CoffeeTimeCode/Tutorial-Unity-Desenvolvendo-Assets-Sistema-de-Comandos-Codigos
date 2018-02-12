@@ -2,8 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Comandos.cs">
     <Files>
-      <File FileName="Assets\Scripts\Comandos.cs" Line="23" Column="3" />
-      <File FileName="Assets\Scripts\Terminal.cs" Line="21" Column="44" />
+      <File FileName="Assets\Scripts\Comandos.cs" Line="40" Column="26" />
+      <File FileName="Assets\Scripts\Terminal.cs" Line="14" Column="76" />
+      <File FileName="Assets\Scripts\Item.cs" Line="5" Column="21" />
+      <File FileName="Assets\Scripts\ListaDeItens.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\Usuario.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\ListaDeUsuarios.cs" Line="6" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
